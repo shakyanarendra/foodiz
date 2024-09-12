@@ -1,0 +1,314 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #131111;
+  padding: 10px 5px;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #444;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  padding: 10px;
+}
+
+.navbar ul li a {
+  color: white;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #160101;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero button {
+  background-color: #ff6b6b;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.hero button:hover {
+  background-color: #e05e5e;
+}
+
+/* Menu Section Styles */
+.menu {
+  padding: 100px 9px;
+  background-color: #f7f7f7;
+  padding-bottom: 250px;
+}
+
+.dishes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dish {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: calc(33.333% - 20px); /* Adjusted width to fit three items per row with margin */
+  margin-bottom: 20px;
+}
+
+.dish h3 {
+  color: #ff6b6b;
+}
+
+.dish-image {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  height: 60px; /* Adjust height as needed */
+  margin-top: auto;
+}
+
+/* About Us Section Styles */
+.about {
+  padding: 120px 9px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.about-image {
+  width: 40%;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.about-text {
+  max-width: 60%;
+}
+
+.about-text h2 {
+  color: #ff6b6b;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Contact Form Styles */
+.contact {
+  padding: 100px 9px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #ff6b6b;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 150px;
+}
+
+button[type="submit"] {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #e05e5e;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For Pixel 7 and other devices with a similar width */
+@media (max-width: 411px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    padding: 5px 0;
+  }
+
+  .hero button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .dish {
+    width: calc(50% - 10px); /* Two items per row */
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+
+/* For iPad and larger tablets */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    padding: 5px 0;
+  }
+
+  .hero button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .dish {
+    width: calc(50% - 20px); /* Two items per row */
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+
+/* For devices larger than iPad (e.g., laptops) */
+@media (min-width: 769px) {
+  .dish {
+    width: calc(33.333% - 20px); /* Three items per row */
+  }
+}
