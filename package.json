@@ -1,16 +1,16 @@
 {
   "name": "food-website",
   "private": true,
+  "homepage":"https://shakyanarendra.github.io/foodiz",
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shakyanarendra.github.io/foodiz",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.3.1",
